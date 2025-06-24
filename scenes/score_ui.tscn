@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct5segtf7w7f6"]
+
+[ext_resource type="Script" uid="uid://koy8gcn1h73y" path="res://scripts/score_ui.gd" id="1_yt0h2"]
+[ext_resource type="FontFile" uid="uid://cmxywsdt5tgq" path="res://fonts/Minecraft.ttf" id="2_jw7sf"]
+
+[node name="scoreUI" type="CanvasLayer"]
+script = ExtResource("1_yt0h2")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 253.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_jw7sf")
+theme_override_font_sizes/font_size = 32
+text = "Container Count: 0"

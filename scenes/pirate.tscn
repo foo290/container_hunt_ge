@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://btpsqkvys1nln"]
+
+[ext_resource type="Texture2D" uid="uid://co83yioy5cohx" path="res://assets/Pirate-idle.png" id="1_yronr"]
+[ext_resource type="Texture2D" uid="uid://cml478ufnojnp" path="res://assets/Pirate up.png" id="2_twq3p"]
+[ext_resource type="Texture2D" uid="uid://badl51fy68xsb" path="res://assets/Pirate low.png" id="3_fptya"]
+[ext_resource type="PackedScene" uid="uid://bmwcbwql1xwpy" path="res://scenes/killzone.tscn" id="4_twq3p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yronr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yronr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_twq3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fptya")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twq3p"]
+size = Vector2(27, 37)
+
+[node name="pirate" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yronr")
+autoplay = "default"
+
+[node name="killzone" parent="." instance=ExtResource("4_twq3p")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_twq3p")

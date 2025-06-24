@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://drtf3kcdfg06l"]
+
+[ext_resource type="FontFile" uid="uid://cmxywsdt5tgq" path="res://fonts/Minecraft.ttf" id="1_ouftm"]
+
+[node name="GameOverScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -190.0
+offset_bottom = -182.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 92.0
+offset_right = 1046.0
+offset_bottom = 554.0
+color = Color(0.35, 0.003, 0.082, 0)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 116.0
+offset_right = 1054.0
+offset_bottom = 569.0
+theme_override_fonts/font = ExtResource("1_ouftm")
+theme_override_font_sizes/font_size = 180
+text = "YOU DIED!"
+horizontal_alignment = 1
+vertical_alignment = 1
